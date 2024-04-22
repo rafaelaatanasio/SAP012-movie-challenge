@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import App from './components/App.js';
-
-document.getElementById('root').appendChild(App());
-=======
 import {App} from './components/App.js';
 import {getMovies} from './lib/tmdb.js';
 getMovies().then((data) => {
@@ -22,4 +17,3 @@ const btn = document.getElementById('button-go');
 buttonGo.addEventListener('click', () => {
 
 });*/
->>>>>>> original/main

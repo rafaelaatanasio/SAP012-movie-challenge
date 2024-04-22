@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-const App = () => {
-  const el = document.createElement('div');
-
-  el.className = 'App';
-  el.textContent = 'Hola mundo!';
-
-  return el;
-};
-
-export default App;
-=======
 export const App = (data) => {
 
   // aqui crio um elemento de div
@@ -38,9 +26,7 @@ export const App = (data) => {
     </div>
   </li>`
 
-
   
   });
 return el;
 }
->>>>>>> original/main
