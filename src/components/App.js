@@ -1,45 +1,33 @@
-const App = () => {
+export const App = (data) => {
+
+  // aqui crio um elemento de div
   const el = document.createElement('div');
 
-  el.className = 'App';
-  el.textContent = 'oi';
+  data.results.forEach((item) => {
+    el.innerHTML += `<p> olar ${item.title} </p>
+        
+    <li itemscope itemtype="Rota dos Sonhos" class="list__card">
+    <div class="container__card">
+      <dl itemscope itemtype="RoteirosDosSonhos" class="content__card">
+        <div class="front">
+          <dt><img src="${item.imageUrl}" alt="Imagem do Destino" itemprop="${item.name}" class="image__card" /></dt>
+          <h2 itemprop="sort-order" class="name">${item.name} - ${item.facts.brState}</h2>
+          <dd itemprop="shortDescription" class="shortDescription">${item.shortDescription}</dd>
+          <dd itemprop="caracteristicas" class="someFeatures">${item.facts.someFeatures}</dd>
+          <dd itemprop="itineraryType" class="itineraryType">${item.facts.itineraryType}</dd>
+          <dd itemprop="estimatedValue" class="estimatedValue">${item.facts.estimatedValue}</dd>
+        </div>
+        <div class="back">
+          <dd itemprop="description" class="description">${item.description}</dd>
+          <dd itemprop="bestActivities" class="bestActivities">${item.facts.bestActivities}</dd>
+          <dd itemprop="bestMonth" class="bestMonth">${item.facts.bestMonth}</dd>
+        </div>
+      </dl>
+    </div>
+  </li>`
 
-  const options = {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1MDkzNjA4NGFiNjU3ZjA1OGMxMzczODk1MDI4MWVmNyIsInN1YiI6IjY2MGQ4YmMyZDQwMGYzMDE2NDA1ZDhjNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.bLbpeBECzSBZJHtkDKdfY9whOAQrFSDZBXGJVHwselc'
-    }
-  };
 
-    /* fetch('https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc', options)
-      .then(response => response.json()) // dados em forma de objeto
-      .then(response => console.log(response))
-      .catch(err => console.error(err));
-
-      // filtrar os filmes que quero mostrar, cards
-
-      // clicar nos filmes e ir para outra página
-
-      // mudar a página conforme clica nos numeros ou 'próxima página'
-
-      // dividir a lista em páginas e permitir que o usuário navegue entre elas
-
-      // ordenar
-
-      // filmar
-
-      // pesquisar
-
-      // página anterior
-
-      // próxima página
-
-      // barra de rolangem
   
-
-*/
-  return el;
-};
-
-export default App;
+  });
+return el;
+}

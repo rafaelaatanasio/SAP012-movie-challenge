@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <title>Movie Challenge</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/b8f3ef2ad6.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -12,6 +14,52 @@
     <header>
       <p>FILMES ------ ------</p>
     </header>
+
+    <nav>
+      <div id="search-section"> <!--divs para pesquisa em cima com o logo ao lado-->
+
+        <div id="org-section">
+          <i class="fa-solid fa-arrow-up-short-wide"></i> <!--ícone-->
+          <label for="order">Organizar</label><!--label for para criar campo Organizar-->
+          <select id="order" name="sort-order" data-testid="select-sort"><!--seleciona o organizar em abas-->
+            <option value="Todos" selected hidden disabled></option>
+            <option value="asc">A-Z</option>
+            <option value="desc">Z-A</option>
+          </select>
+        </div>
+
+        <div id="filter-section">
+          <i class="fa-solid fa-filter"></i>
+          <label for="filter">Filtrar por Gênero</label>
+          <select id="filter" name="search-filter" data-testid="select-filter">
+            <option value="Todos" selected hidden disabled></option>
+            <option value="Action">Ação</option>
+            <option value="Action & Adventure">Ação e Aventura</option>
+            <option value="Animation">Animação</option>
+            <option value="Comedy">Comédia</option>
+            <option value="Drama">Drama</option>
+            <option value="Family">Família</option>
+            <option value="Fantasy">Fantasia</option>
+            <option value="History">História</option>
+            <option value="Horror">Terror</option>
+            <option value="Music">Música</option>
+            <option value="Mystery">Mistério</option>
+            <option value="Romance">Romance</option>
+            <option value="Sci-Fi & Fantasy">Sci-Fi e Fantasia</option>
+            <option value="Science Fiction">Ficção Científica</option>
+            <option value="Thriller">Suspense</option>
+            <option value="War">Guerra</option>
+            <option value="Western">Faroeste</option>           
+          </select>
+        </div>
+
+        <input type="name" name="" id="movieId"> <!--REVISAR ESSE INPUT-->
+        <div id="button-section">
+          <button id="button-go" data-testid="button-go" value="go-filters">Limpar</button>
+        </div>
+
+      </div>
+    </nav>
 
     <div id="root"></div> <!--aqui irão as informações-->
 
