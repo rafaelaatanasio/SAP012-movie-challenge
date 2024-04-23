@@ -10,68 +10,70 @@
 </head>
 
 <body>
-  <main>
-    <header>
-      <p>FILMES ------ ------</p>
-    </header>
+
+  <header>
+    <p>FILMINHOS - Catálogo de filmes</p>
 
     <nav>
-      <div id="search-section"> <!--divs para pesquisa em cima com o logo ao lado-->
-
-        <div id="org-section">
-          <i class="fa-solid fa-arrow-up-short-wide"></i> <!--ícone-->
-          <label for="order">Organizar</label><!--label for para criar campo Organizar-->
-          <select id="order" name="sort-order" data-testid="select-sort"><!--seleciona o organizar em abas-->
-            <option value="Todos" selected hidden disabled></option>
-            <option value="asc">A-Z</option>
-            <option value="desc">Z-A</option>
-          </select>
-        </div>
-
-        <div id="filter-section">
-          <i class="fa-solid fa-filter"></i>
-          <label for="filter">Filtrar por Gênero</label>
-          <select id="filter" name="search-filter" data-testid="select-filter">
-            <option value="Todos" selected hidden disabled></option>
-            <option value="Action">Ação</option>
-            <option value="Action & Adventure">Ação e Aventura</option>
-            <option value="Animation">Animação</option>
-            <option value="Comedy">Comédia</option>
-            <option value="Drama">Drama</option>
-            <option value="Family">Família</option>
-            <option value="Fantasy">Fantasia</option>
-            <option value="History">História</option>
-            <option value="Horror">Terror</option>
-            <option value="Music">Música</option>
-            <option value="Mystery">Mistério</option>
-            <option value="Romance">Romance</option>
-            <option value="Sci-Fi & Fantasy">Sci-Fi e Fantasia</option>
-            <option value="Science Fiction">Ficção Científica</option>
-            <option value="Thriller">Suspense</option>
-            <option value="War">Guerra</option>
-            <option value="Western">Faroeste</option>           
-          </select>
-        </div>
-
-        <input type="name" name="" id="movieId"> <!--REVISAR ESSE INPUT-->
-        <div id="button-section">
-          <button id="button-go" data-testid="button-go" value="go-filters">Limpar</button>
-        </div>
-
-      </div>
-    </nav>
-
-    <div id="root"></div> <!--aqui irão as informações-->
-
-  </main>
-
-  <footer>
-    <nav>
-      <ul class="social-links">
-        <li><a href="https://github.com/rafaelaatanasio" target="_blank">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/rafaela-atanasio/" target="_blank">LinkedIn</a></li>
+      <ul>
+        <li><a href="/#">HOME</a></li>
+        <li><a href="/#contato">CONTATO</a></li>
+        <li><a href="/#sobre">SOBRE</a></li>
       </ul>
     </nav>
+  </header>
+
+  <!--  <div id="search-section"> divs para pesquisa em cima com o logo ao lado
+
+    <div id="org-section">
+      <i class="fa-solid fa-arrow-up-short-wide"></i> 
+      <label for="order">Organizar</label>  label for para criar campo Organizar
+      <select id="order" name="sort-order" data-testid="select-sort"> seleciona o organizar em abas
+        <option value="Todos" selected hidden disabled></option>
+        <option value="asc">A-Z</option>
+        <option value="desc">Z-A</option>
+      </select>
+    </div>
+
+    <div id="filter-section">
+      <i class="fa-solid fa-filter"></i>
+      <label for="filter">Filtrar por Gênero</label>
+      <select id="filter" name="search-filter" data-testid="select-filter">
+        <option value="Todos" selected hidden disabled></option>
+        <option value="Action">Ação</option>
+        <option value="Action & Adventure">Ação e Aventura</option>
+        <option value="Animation">Animação</option>
+        <option value="Comedy">Comédia</option>
+        <option value="Drama">Drama</option>
+        <option value="Family">Família</option>
+        <option value="Fantasy">Fantasia</option>
+        <option value="History">História</option>
+        <option value="Horror">Terror</option>
+        <option value="Music">Música</option>
+        <option value="Mystery">Mistério</option>
+        <option value="Romance">Romance</option>
+        <option value="Sci-Fi & Fantasy">Sci-Fi e Fantasia</option>
+        <option value="Science Fiction">Ficção Científica</option>
+        <option value="Thriller">Suspense</option>
+        <option value="War">Guerra</option>
+        <option value="Western">Faroeste</option>
+      </select>
+    </div> 
+
+    <input type="name" name="" id="movieId">  REVISAR ESSE INPUT
+    <div id="button-section">
+      <button id="button-go" data-testid="button-go" value="go-filters">Limpar</button>
+    </div>
+
+  </div>-->
+
+  <main id="root"> </main> <!--aqui irão as informações-->
+
+  <footer>
+    <ul class="social-links">
+      <li><a href="https://github.com/rafaelaatanasio" target="_blank">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/rafaela-atanasio/" target="_blank">LinkedIn</a></li>
+    </ul>
   </footer>
 
   <script src="main.js" type="module"></script>

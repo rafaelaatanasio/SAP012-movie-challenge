@@ -12,12 +12,8 @@ export function getMovies() {
     // função fetch('url' e o options (variável que criei na linha 5)) faz solicitações http. Aqui enviei uma solicitação get para a url que peguei. A API.
     return fetch('https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc', options)
         .then(response => response.json()) // função .then() é encadeada para manipular a resposta da solicitação. Neste caso, a resposta HTTP é convertida em formato JSON usando o método .json()
-        .then((data) => { 
+        .then((data) => {
             return data
-            // para manipular os dados JSON recebidos da API
-            // DESCOMENTAR APOS CRIAR O DATA const appInstance = App(data); // Passa os dados obtidos para o componente App. Responsável por processar esses dados e criar um componente ou estrutura de dados que será renderizado na interface do usuário
-            // Adiciona o componente renderizado ao elemento com id 'root'
         })
         .catch(error => console.error('Erro ao obter dados da API: ou sei lá', error)); // para lidar com erros que ocorrem durante a execução da promessa
 }
-
