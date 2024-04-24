@@ -77,6 +77,11 @@ footer {
     /* Centraliza o footer horizontalmente */
 }
 
+footer #links {
+    color: gray;
+    background-color: #2e0808;
+}
+
 .social-links {
     list-style-type: none;
     /* Remove os marcadores de lista */

@@ -15,5 +15,5 @@ export function getMovies() {
         .then((data) => {
             return data
         })
-        .catch(error => console.error('Erro ao obter dados da API: ou sei lá', error)); // para lidar com erros que ocorrem durante a execução da promessa
+        .catch(error => console.error('Erro ao obter dados da API: ', error)); // para lidar com erros que ocorrem durante a execução da promessa
 }
