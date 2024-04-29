@@ -27,7 +27,7 @@ export const Back = (data) => {
     details.innerHTML += `
     <div class="poster-container">
     <h2 itemprop="title" class="title">${data.title}</h2>
-    <dl itemscope itemtype="Filmes" class="content__card">
+    <dl itemscope itemtype="Filmes" class="back_card">
         <dt><img src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt="Imagem do Filme" class="image__card"></dt>
         <dd itemprop="overview" class="overview">${data.overview}</dd>
         <dd itemprop="release_date" class="releaseDate">${data.release_date}</dd>

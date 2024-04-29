@@ -1,3 +1,4 @@
+/* Estilos gerais */
 a {
     text-decoration: none;
 }
@@ -47,19 +48,62 @@ nav {
     /* Ocupa toda a largura do contêiner pai */
 }
 
-#search-section {
-    color: rgb(235, 178, 168);
+
+
+/* Estilos para alinhar os cartões lado a lado */
+.poster-container {
     display: flex;
-    align-items: center;
-    /* Centraliza os elementos verticalmente */
-    margin-right: auto;
-    /* Empurra os elementos para a direita */
-    margin-left: auto;
+    flex-wrap: wrap;
+    /* Permite que os cartões quebrem para a próxima linha se não houver espaço suficiente */
+    justify-content: space-between;
+    /* Alinha os cartões à esquerda do contêiner */
 }
 
-#button-section {
-    margin-left: auto;
-    /* Empurra o botão para a direita */
+.image__card {
+    width: 250px;
+    /* Defina a largura desejada para os cartões */
+    margin: 10px;
+    /* Espaçamento entre os cartões */
+}
+
+.title {
+    font-family: Arial, sans-serif;
+    /* Define a fonte do texto */
+    color: #aa6464;
+    /* Define a cor do texto */
+    font-size: 16px;
+    /* Define o tamanho da fonte */
+    font-weight: bold;
+    /* Define a espessura da fonte como negrito */
+    margin: 10px;
+    /* Espaçamento entre os cartões */
+    width: 250px;
+    /* Defina a largura desejada para os cartões */
+}
+
+/* Estilos específicos para a segunda página (detalhes) */
+.back_card {
+    display: flex;
+    align-items: flex-start; /* Alinha os itens verticalmente ao topo */
+    margin-bottom: 20px; /* Adiciona espaço abaixo do cartão */
+}
+
+.back_card .image__card {
+    margin-right: 20px; /* Adiciona espaço entre a imagem e as informações */
+}
+
+.back_card .title {
+    margin-bottom: 10px; /* Adiciona espaço abaixo do título */
+}
+
+.back_card .releaseDate {
+    font-family: Arial, sans-serif;
+    color: #9b9696;
+    font-size: 14px;
+    font-weight: lighter;
+    margin: 10px;
+    width: 250px;
+    font-style: italic; /* Estilo opcional para a data de lançamento */
 }
 
 footer {
@@ -98,50 +142,4 @@ footer #links {
 .social-links li:last-child {
     margin-right: 0;
     /* Remove o espaçamento do último link */
-}
-
-/* Estilos para alinhar os cartões lado a lado */
-.poster-container {
-    display: flex;
-    flex-wrap: wrap;
-    /* Permite que os cartões quebrem para a próxima linha se não houver espaço suficiente */
-    justify-content: space-between;
-    /* Alinha os cartões à esquerda do contêiner */
-}
-
-.image__card {
-    width: 250px;
-    /* Defina a largura desejada para os cartões */
-    margin: 10px;
-    /* Espaçamento entre os cartões */
-}
-
-.title {
-    font-family: Arial, sans-serif;
-    /* Define a fonte do texto */
-    color: #aa6464;
-    /* Define a cor do texto */
-    font-size: 16px;
-    /* Define o tamanho da fonte */
-    font-weight: bold;
-    /* Define a espessura da fonte como negrito */
-    margin: 10px;
-    /* Espaçamento entre os cartões */
-    width: 250px;
-    /* Defina a largura desejada para os cartões */
-}
-
-.releaseDate {
-    font-family: Arial, sans-serif;
-    /* Define a fonte do texto */
-    color: #9b9696;
-    /* Define a cor do texto */
-    font-size: 14px;
-    /* Define o tamanho da fonte */
-    font-weight: lighter;
-    /* Define a espessura da fonte como negrito */
-    margin: 10px;
-    /* Espaçamento entre os cartões */
-    width: 250px;
-    /* Defina a largura desejada para os cartões */
 }
