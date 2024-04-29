@@ -24,7 +24,6 @@ export const Back = (data) => {
   const details = document.createElement('div');
   details.classList.add('poster-container');
 
-  data((item) => {
     details.innerHTML += `
     <div class="poster-container">
     <h2 itemprop="title" class="title">${data.title}</h2>
@@ -36,7 +35,6 @@ export const Back = (data) => {
     </dl>
 </div>
 `;
-  });
   return details;
 }
 
