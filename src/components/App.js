@@ -24,17 +24,21 @@ export const Back = (data) => {
   const details = document.createElement('div');
   details.classList.add('poster-container');
 
-    details.innerHTML += `
+  details.innerHTML += `
     <div class="poster-container">
-    <h2 itemprop="title" class="title">${data.title}</h2>
-    <dl itemscope itemtype="Filmes" class="back_card">
+      <h2 itemprop="title" class="back_title">${data.title}</h2>
+      <div class="back_link_container">
+        <a href="/#root" class="link_back">Voltar</a>
+      </div>
+      <dl itemscope itemtype="Filmes" class="back_card">
         <dt><img src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt="Imagem do Filme" class="image__card"></dt>
-        <dd itemprop="overview" class="overview">${data.overview}</dd>
-        <dd itemprop="release_date" class="releaseDate">${data.release_date}</dd>
-        <dd itemprop="vote_average" class="voteAverage">${data.vote_average}</dd>
-    </dl>
-</div>
-`;
+        <div class="back_info"> <!-- Novo elemento para envolver o título e a data -->
+          <dd itemprop="overview" class="overview">${data.overview}</dd>
+          <dd itemprop="release_date" class="releaseDate">Lançamento em ${data.release_date}</dd>
+        </div>
+      </dl>
+    </div>
+  `;
   return details;
 }
 
