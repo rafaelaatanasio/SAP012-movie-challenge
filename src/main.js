@@ -1,4 +1,4 @@
-import { App, Back } from './components/App.js';
+import App, { Back } from './components/App.js';
 import { getMovies, getId } from './lib/tmdb.js';
 
 const main = document.querySelector("#root");

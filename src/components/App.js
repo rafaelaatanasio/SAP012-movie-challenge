@@ -1,4 +1,4 @@
-export const App = (data) => {
+const App = (data) => {
 
   // aqui crio um elemento de div
   const el = document.createElement('div');
@@ -42,3 +42,4 @@ export const Back = (data) => {
   return details;
 }
 
+export default App;
