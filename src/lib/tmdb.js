@@ -6,7 +6,7 @@ const options = { // história de usuário 1
     }
 };
 
-export function getMovies() {
+/*export function getMovies() {
 
     //JSON Objeto javascript
     // função fetch('url' e o options (variável que criei na linha 5)) faz solicitações http. Aqui enviei uma solicitação get para a url que peguei. A API.
@@ -16,6 +16,20 @@ export function getMovies() {
             return data
         })
         .catch(error => console.error('Erro ao obter dados da API: ', error)); // para lidar com erros que ocorrem durante a execução da promessa
+}*/
+
+export function getMovies() {
+    return fetch('https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc', options)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao obter dados da API');
+            }
+            return response.json();
+        })
+        .catch(error => {
+            console.error('Erro ao obter dados da API: ', error);
+            return null; // Retorna null em caso de erro
+        });
 }
 
 const secondPage = { // história de usuário 2
@@ -26,7 +40,7 @@ const secondPage = { // história de usuário 2
     }
   };
   
-  export function getId(movie_id) {
+/*  export function getId(movie_id) {
 
   return fetch(`https://api.themoviedb.org/3/movie/${movie_id}?language=en-US`, secondPage) // dinâmico
     .then(response => response.json())
@@ -35,4 +49,18 @@ const secondPage = { // história de usuário 2
     })
     .catch(error => console.error('Erro ao obter dados da API: ', error));
 }
+*/
 
+export function getId(movie_id) {
+    return fetch(`https://api.themoviedb.org/3/movie/${movie_id}?language=en-US`, secondPage)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao obter dados da API');
+            }
+            return response.json();
+        })
+        .catch(error => {
+            console.error('Erro ao obter dados da API: ', error);
+            return null; // Retorna null em caso de erro
+        });
+}
